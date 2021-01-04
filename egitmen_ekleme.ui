@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Eğitmen Ekleme Ekranı</string>
+  </property>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>110</y>
+     <width>531</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="yNeticiAdLabel">
+      <property name="text">
+       <string>Eğitmen Adı Soyadı</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="egitmen_adi_soyadi"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="yNeticiTCNoLabel">
+      <property name="text">
+       <string>Eğitmen T.C. No </string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="egitmen_tc"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="yNeticiIfreLabel">
+      <property name="text">
+       <string>Eğitmen Şifre</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="egitmen_sifre"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="eItmenTelefonLabel">
+      <property name="text">
+       <string>Eğitmen Telefon</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="egitmen_tel"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="eItmenAdresLabel">
+      <property name="text">
+       <string>Eğitmen Adres</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="egitmen_adres"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="yNeticiDurumuLabel">
+      <property name="text">
+       <string>Eğitmen Durumu</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QComboBox" name="egitmen_durum">
+      <item>
+       <property name="text">
+        <string>Aktif</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pasif</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="yelikBitiTarihiLabel">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QPushButton" name="egitmen_ekle_btn">
+      <property name="text">
+       <string>Eğitmeni Ekle</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>50</y>
+     <width>740</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Yeni Eğitmen Ekleme Formu</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

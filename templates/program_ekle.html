@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Antrenman Programı Ekleme Sayfasına Hoş Geldiniz</title>
+</head>
+<body>
+  <form  action="/program_ekle_kontrol" method="post">
+
+{{ mesaj }}
+    <div >
+        <table border="1">
+            <tr><td><label for="uname"><b>Antrenman Adı</b></label></td>
+                <td><input type="text" placeholder="Antrenman Adı Giriniz" name="antrenman_adi" required></td></tr>
+
+        <tr><td><label ><b>Antrenman İçeriği</b></label></td>
+            <td><textarea rows="5" placeholder="Antrenman İçeriğini Giriniz" name="antrenman_icerigi" required></textarea></td></tr>
+
+            <tr><td><label for="text"><b>Antrenman Durum</b></label></td>
+                <td>  <select name="antrenman_durum">
+    <option value="0">Aktif</option>
+    <option value="1">Pasif</option>
+  </select></td></tr>
+
+            <tr><td colspan="2"><button type="submit">Antrenman Kaydet</button></td></tr>
+        </table>
+    </div>
+
+  </form>
+
+</body>
+</html>

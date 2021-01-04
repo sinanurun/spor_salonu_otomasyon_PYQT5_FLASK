@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Eğitmen Randevu Ekleme Ekranı</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>781</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Eğitmen Randevu Ekleme Ekranına Hoş Geldiniz</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>50</y>
+     <width>200</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="eItmenSeInizLabel">
+      <property name="text">
+       <string>Eğitmen Seçiniz</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="egitmen"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="tarihSeInizLabel">
+      <property name="text">
+       <string>Tarih Seçiniz</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QDateEdit" name="randevu_tarihi">
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="randevuSaatAralLabel">
+      <property name="text">
+       <string>Randevu Saat Aralığı</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QComboBox" name="randevu_araligi">
+      <item>
+       <property name="text">
+        <string>08:00 - 17:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>14:00 - 23:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15:00 - 24:00</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="randevuDurumuLabel">
+      <property name="text">
+       <string>Randevu Durumu</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QComboBox" name="randevu_durumu">
+      <item>
+       <property name="text">
+        <string>Aktif</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pasif</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="randevu_ekle_btn">
+      <property name="text">
+       <string>Randevu ekle</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>190</y>
+     <width>790</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>790</width>
+     <height>431</height>
+    </size>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOn</enum>
+   </property>
+   <attribute name="horizontalHeaderCascadingSectionResizes">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>90</number>
+   </attribute>
+   <attribute name="horizontalHeaderStretchLastSection">
+    <bool>false</bool>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>Eğitmen Adı Soyadı</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Randevu Tarihi</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Saat Aralığı</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Randevu 1</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Randevu 2</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Randevu 3</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Randevu 4</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Randevu 5</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Randevu 6</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Randevu 7</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Randevu 8</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Sil</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

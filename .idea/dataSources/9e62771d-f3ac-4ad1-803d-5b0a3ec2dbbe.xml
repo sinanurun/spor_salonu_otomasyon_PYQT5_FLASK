@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="sporsalonu">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.14">
+    <root id="1">
+      <ServerVersion>3.25.1</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <collation id="3" parent="1" name="BINARY"/>
+    <collation id="4" parent="1" name="NOCASE"/>
+    <collation id="5" parent="1" name="RTRIM"/>
+    <table id="6" parent="2" name="antrenman"/>
+    <table id="7" parent="2" name="egitmen"/>
+    <table id="8" parent="2" name="randevu"/>
+    <table id="9" parent="2" name="sqlite_master">
+      <System>1</System>
+    </table>
+    <table id="10" parent="2" name="uye"/>
+    <table id="11" parent="2" name="yonetim"/>
+    <column id="12" parent="6" name="antrenman_id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="13" parent="6" name="antrenman_adi">
+      <Position>2</Position>
+      <DataType>VARCHAR(40)|0s</DataType>
+    </column>
+    <column id="14" parent="6" name="egitmen_id">
+      <Position>3</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="15" parent="6" name="antrenman_durum">
+      <Position>4</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="16" parent="6" name="antrenman_icerigi">
+      <Position>5</Position>
+      <DataType>VARCHAR(1000)|0s</DataType>
+    </column>
+    <index id="17" parent="6" name="sqlite_autoindex_antrenman_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>antrenman_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="18" parent="6">
+      <ColNames>antrenman_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_antrenman_1</UnderlyingIndexName>
+    </key>
+    <key id="19" parent="6">
+      <ColNames>antrenman_id</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_antrenman_1</UnderlyingIndexName>
+    </key>
+    <foreign-key id="20" parent="6">
+      <ColNames>egitmen_id</ColNames>
+      <RefTableName>egitmen</RefTableName>
+      <RefColNames>egitmen_id</RefColNames>
+    </foreign-key>
+    <column id="21" parent="7" name="egitmen_id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="7" name="egitmen_adi_soyadi">
+      <Position>2</Position>
+      <DataType>VARCHAR(100)|0s</DataType>
+    </column>
+    <column id="23" parent="7" name="egitmen_tc">
+      <Position>3</Position>
+      <DataType>VARCHAR(100)|0s</DataType>
+    </column>
+    <column id="24" parent="7" name="egitmen_sifre">
+      <Position>4</Position>
+      <DataType>VARCHAR(100)|0s</DataType>
+    </column>
+    <column id="25" parent="7" name="egitmen_tel">
+      <Position>5</Position>
+      <DataType>VARCHAR(15)|0s</DataType>
+    </column>
+    <column id="26" parent="7" name="egitmen_adres">
+      <Position>6</Position>
+      <DataType>VARCHAR(500)|0s</DataType>
+    </column>
+    <column id="27" parent="7" name="egitmen_durum">
+      <Position>7</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <index id="28" parent="7" name="sqlite_autoindex_egitmen_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>egitmen_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <index id="29" parent="7" name="sqlite_autoindex_egitmen_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>egitmen_tc</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="30" parent="7">
+      <ColNames>egitmen_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_egitmen_1</UnderlyingIndexName>
+    </key>
+    <key id="31" parent="7">
+      <ColNames>egitmen_id</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_egitmen_1</UnderlyingIndexName>
+    </key>
+    <key id="32" parent="7">
+      <ColNames>egitmen_tc</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_egitmen_2</UnderlyingIndexName>
+    </key>
+    <column id="33" parent="8" name="randevu_id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="8" name="egitmen_id">
+      <Position>2</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="35" parent="8" name="randevu_saat1">
+      <Position>3</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="36" parent="8" name="randevu_saat2">
+      <Position>4</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="37" parent="8" name="randevu_saat3">
+      <Position>5</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="38" parent="8" name="randevu_saat4">
+      <Position>6</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="39" parent="8" name="randevu_saat5">
+      <Position>7</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="40" parent="8" name="randevu_saat6">
+      <Position>8</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="41" parent="8" name="randevu_saat7">
+      <Position>9</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="42" parent="8" name="randevu_saat8">
+      <Position>10</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="43" parent="8" name="randevu_araligi">
+      <Position>11</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="44" parent="8" name="randevu_tarihi">
+      <Position>12</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <column id="45" parent="8" name="randevu_durum">
+      <Position>13</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <index id="46" parent="8" name="sqlite_autoindex_randevu_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>randevu_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="47" parent="8">
+      <ColNames>randevu_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_randevu_1</UnderlyingIndexName>
+    </key>
+    <key id="48" parent="8">
+      <ColNames>randevu_id</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_randevu_1</UnderlyingIndexName>
+    </key>
+    <foreign-key id="49" parent="8">
+      <ColNames>egitmen_id</ColNames>
+      <RefTableName>egitmen</RefTableName>
+      <RefColNames>egitmen_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="50" parent="8">
+      <ColNames>randevu_saat1</ColNames>
+      <RefTableName>uye</RefTableName>
+      <RefColNames>uye_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="51" parent="8">
+      <ColNames>randevu_saat2</ColNames>
+      <RefTableName>uye</RefTableName>
+      <RefColNames>uye_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="52" parent="8">
+      <ColNames>randevu_saat3</ColNames>
+      <RefTableName>uye</RefTableName>
+      <RefColNames>uye_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="53" parent="8">
+      <ColNames>randevu_saat4</ColNames>
+      <RefTableName>uye</RefTableName>
+      <RefColNames>uye_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="54" parent="8">
+      <ColNames>randevu_saat5</ColNames>
+      <RefTableName>uye</RefTableName>
+      <RefColNames>uye_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="55" parent="8">
+      <ColNames>randevu_saat6</ColNames>
+      <RefTableName>uye</RefTableName>
+      <RefColNames>uye_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="56" parent="8">
+      <ColNames>randevu_saat7</ColNames>
+      <RefTableName>uye</RefTableName>
+      <RefColNames>uye_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="57" parent="8">
+      <ColNames>randevu_saat8</ColNames>
+      <RefTableName>uye</RefTableName>
+      <RefColNames>uye_id</RefColNames>
+    </foreign-key>
+    <column id="58" parent="9" name="type">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="59" parent="9" name="name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="60" parent="9" name="tbl_name">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="61" parent="9" name="rootpage">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="62" parent="9" name="sql">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="63" parent="10" name="uye_id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="10" name="uye_adi_soyadi">
+      <Position>2</Position>
+      <DataType>VARCHAR(40)|0s</DataType>
+    </column>
+    <column id="65" parent="10" name="uye_tc">
+      <Position>3</Position>
+      <DataType>VARCHAR(11)|0s</DataType>
+    </column>
+    <column id="66" parent="10" name="uye_sifre">
+      <Position>4</Position>
+      <DataType>VARCHAR(8)|0s</DataType>
+    </column>
+    <column id="67" parent="10" name="uye_tel">
+      <Position>5</Position>
+      <DataType>VARCHAR(10)|0s</DataType>
+    </column>
+    <column id="68" parent="10" name="uye_adres">
+      <Position>6</Position>
+      <DataType>VARCHAR(100)|0s</DataType>
+    </column>
+    <column id="69" parent="10" name="uye_notu">
+      <Position>7</Position>
+      <DataType>VARCHAR(500)|0s</DataType>
+    </column>
+    <column id="70" parent="10" name="egitmen_id">
+      <Position>8</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="71" parent="10" name="antrenman_id">
+      <Position>9</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="72" parent="10" name="ozel_antrenman">
+      <Position>10</Position>
+      <DataType>VARCHAR(500)|0s</DataType>
+    </column>
+    <column id="73" parent="10" name="uye_tarihi">
+      <Position>11</Position>
+      <DataType>VARCHAR(15)|0s</DataType>
+    </column>
+    <column id="74" parent="10" name="uye_kalan">
+      <Position>12</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="75" parent="10" name="uye_durum">
+      <Position>13</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <index id="76" parent="10" name="sqlite_autoindex_uye_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>uye_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <index id="77" parent="10" name="sqlite_autoindex_uye_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>uye_tc</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="78" parent="10">
+      <ColNames>uye_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_uye_1</UnderlyingIndexName>
+    </key>
+    <key id="79" parent="10">
+      <ColNames>uye_id</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_uye_1</UnderlyingIndexName>
+    </key>
+    <key id="80" parent="10">
+      <ColNames>uye_tc</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_uye_2</UnderlyingIndexName>
+    </key>
+    <foreign-key id="81" parent="10">
+      <ColNames>egitmen_id</ColNames>
+      <RefTableName>egitmen</RefTableName>
+      <RefColNames>egitmen_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="82" parent="10">
+      <ColNames>antrenman_id</ColNames>
+      <RefTableName>antrenman</RefTableName>
+      <RefColNames>antrenman_id</RefColNames>
+    </foreign-key>
+    <column id="83" parent="11" name="yonetici_id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="84" parent="11" name="yonetici_adi">
+      <Position>2</Position>
+      <DataType>VARCHAR(10)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="85" parent="11" name="yonetici_tc">
+      <Position>3</Position>
+      <DataType>VARCHAR(11)|0s</DataType>
+    </column>
+    <column id="86" parent="11" name="yonetici_sifre">
+      <Position>4</Position>
+      <DataType>VARCHAR(10)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="11" name="yonetici_durum">
+      <Position>5</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <index id="88" parent="11" name="sqlite_autoindex_yonetim_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>yonetici_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <index id="89" parent="11" name="sqlite_autoindex_yonetim_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>yonetici_tc</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="90" parent="11">
+      <ColNames>yonetici_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_yonetim_1</UnderlyingIndexName>
+    </key>
+    <key id="91" parent="11">
+      <ColNames>yonetici_id</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_yonetim_1</UnderlyingIndexName>
+    </key>
+    <key id="92" parent="11">
+      <ColNames>yonetici_tc</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_yonetim_2</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

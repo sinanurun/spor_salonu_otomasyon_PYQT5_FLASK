@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Eğitmen Randevu Listeleri</title>
+</head>
+<body>
+
+<table border="1">
+    <tr>
+        <th>Saat Aralığı</th>
+      <th>1. saat</th>
+     <th>2. saat</th>
+     <th>3. saat</th>
+     <th>4. saat</th>
+     <th>5. saat</th>
+     <th>6. saat</th>
+     <th>7. saat</th>
+     <th>8. saat</th>
+
+    </tr>    <tr>
+        <td>08:00 - 17:00</td>
+      <td>08:00 - 09:00</td>
+     <td>09:00 - 10:00</td>
+     <td>10:00 - 11:00</td>
+     <td>01:00 - 12:00</td>
+     <td>13:00 - 14:00</td>
+     <td>14:00 - 15:00</td>
+     <td>15:00 - 16:00</td>
+     <td>16:00 - 17:00</td>
+
+    </tr>    <tr>
+    <td>14:00 - 23:00</td>
+        <td>14:00 - 15:00</td>
+      <td>15:00 - 16:00</td>
+     <td>16:00 - 17:00</td>
+     <td>17:00 - 18:00</td>
+     <td>18:00 - 19:00</td>
+     <td>20:00 - 21:00</td>
+     <td>21:00 - 22:00</td>
+     <td>22:00 - 23:00</td>
+
+    </tr>    <tr>
+        <td>15:00 - 24:00</td>
+      <td>15:00 - 16:00</td>
+     <td>16:00 - 17:00</td>
+     <td>17:00 - 18:00</td>
+     <td>18:00 - 19:00</td>
+     <td>19:00 - 20:00</td>
+     <td>21:00 - 22:00</td>
+     <td>22:00 - 23:00</td>
+    <td>23:00 - 24:00</td>
+
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr><th>Randevu Tarihi</th>
+        <th>Saat Aralığı</th>
+      <th>1. saat</th>
+     <th>2. saat</th>
+     <th>3. saat</th>
+     <th>4. saat</th>
+     <th>5. saat</th>
+     <th>6. saat</th>
+     <th>7. saat</th>
+     <th>8. saat</th>
+
+    </tr>
+    {% for randevu in randevular %}
+        <tr>
+
+        <td>{{ randevu.randevu_tarihi }}</td>
+            <td>{% if randevu.randevu_araligi == 0 %}
+                08:00 - 17:00
+                {% elif randevu.randevu_araligi == 1 %}
+               14:00 - 23:00
+                {% elif randevu.randevu_araligi == 2 %}
+15:00 - 24:00
+            {% endif %} </td>
+
+            <td>{{ randevu.randevu_saat1 }}{% if randevu.randevu_saat1 == 0 %}
+                Randevu Yok
+                {% else %}
+                {{  randevu.randevuuye1.uye_adi_soyadi}}
+            {% endif %} </td>
+
+            <td>{% if randevu.randevu_saat2 == 0 %}
+                Randevu Yok
+                {% else %}
+                {{  randevu.randevuuye2.uye_adi_soyadi}}
+            {% endif %} </td>
+
+            <td>{% if randevu.randevu_saat3== 0 %}
+                Randevu Yok
+                {% else %}
+                {{  randevu.randevuuye3.uye_adi_soyadi}}
+            {% endif %} </td>
+
+            <td>{% if randevu.randevu_saat4== 0 %}
+                Randevu Yok
+                {% else %}
+                {{  randevu.randevuuye4.uye_adi_soyadi}}
+            {% endif %} </td>
+
+            <td>{% if randevu.randevu_saat5== 0 %}
+                Randevu Yok
+                {% else %}
+                {{  randevu.randevuuye5.uye_adi_soyadi}}
+            {% endif %} </td>
+
+            <td>{% if randevu.randevu_saat6== 0 %}
+                Randevu Yok
+                {% else %}
+                {{  randevu.randevuuye6.uye_adi_soyadi}}
+            {% endif %} </td>
+
+            <td>{% if randevu.randevu_saat7== 0 %}
+                Randevu Yok
+                {% else %}
+                {{  randevu.randevuuye7.uye_adi_soyadi}}
+            {% endif %} </td>
+
+            <td>{% if randevu.randevu_saat8== 0 %}
+                Randevu Yok
+                {% else %}
+                {{  randevu.randevuuye8.uye_adi_soyadi}}
+            {% endif %} </td>
+
+
+        </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>
